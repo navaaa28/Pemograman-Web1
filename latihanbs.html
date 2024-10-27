@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTB - Latihan Grid Bootstrap</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header, .footer {
+      background-color: #4f4fff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content-section {
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .content-section:hover {
+      transform: scale(1.03);
+    }
+    .content-section p {
+      font-size: 1.1rem;
+    }
+    .table-section {
+      margin-top: 20px;
+    }
+    .form-section {
+      margin-top: 20px;
+    }
+    /* Style untuk logo di pojok kanan bawah */
+    .logo-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .logo-fixed:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <!-- Header -->
+  <div class="row header">
+    <div class="col-md-12">
+      <h1>Latihan Bootstrap</h1>
+      <p>Ini latihan bootstrap pertamaku!</p>
+    </div>
+  </div>
+  <!-- End Header -->
+
+  <!-- Content 3 - Informasi Tambahan -->
+  <div class="row content-section shadow rounded">
+    <div class="col-md-12">
+      <h2>Informasi Tambahan</h2>
+      <p>Selamat datang di latihan penggunaan grid Bootstrap! Di sini kita akan belajar cara membuat halaman web yang rapi dan responsif menggunakan berbagai elemen Bootstrap, seperti tabel, formulir, dan elemen tata letak lainnya.</p>
+      <p>Semoga latihan ini bermanfaat untuk meningkatkan keterampilan Anda dalam pengembangan web modern.</p>
+    </div>
+  </div>
+  <!-- End Content 3 -->
+
+  <!-- Content 2 - Data Table -->
+  <div class="row table-section">
+    <div class="col-md-12">
+      <table class="table table-bordered table-hover">
+        <h2>Daftar Mahasiswa yang sudah mendaftar</h2>
+        <caption><b>Data Mahasiswa</b></caption>
+        <thead>
+          <tr class="table-primary">
+            <th>Nama</th>
+            <th>Universitas</th>
+            <th>Kontak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dany Faturrochman</td>
+            <td>Universitas Teknologi Bandung</td>
+            <td>089633892082</td>
+          </tr>
+          <tr>
+            <td>RivalPun</td>
+            <td>Universitas Teknologi Bandung</td>
+            <td>+62 812-1270-4171</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- End Data Table -->
+
+  <!-- Form Section -->
+  <div class="row form-section">
+    <div class="col-md-12">
+      <form>
+        <fieldset class="border p-4 rounded shadow-sm">
+          <legend class="w-auto">Formulir</legend>
+
+          <div class="mb-3">
+            <label for="namaDepan" class="form-label">Nama Depan:</label>
+            <input type="text" id="namaDepan" name="namaDepan" class="form-control" placeholder="Nama Depan...">
+          </div>
+
+          <div class="mb-3">
+            <label for="namaBelakang" class="form-label">Nama Belakang:</label>
+            <input type="text" id="namaBelakang" name="namaBelakang" class="form-control" placeholder="Nama Belakang...">
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="isi password...">
+          </div>
+
+          <div class="mb-3">
+            <label for="jk" class="form-label">Jenis Kelamin:</label>
+            <select id="jk" name="jk" class="form-select">
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+
+          <p><b>Menggunakan Radio Button</b></p>
+          <p>Jenis Kelamin</p>
+          <div class="form-check">
+            <input type="radio" id="radioLaki" name="jenis_kelamin" value="lakilaki" class="form-check-input">
+            <label for="radioLaki" class="form-check-label">Laki-Laki</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="radioPerempuan" name="jenis_kelamin" value="perempuan" class="form-check-input" checked="checked">
+            <label for="radioPerempuan" class="form-check-label">Perempuan</label>
+          </div>
+
+          <p><b>Menggunakan Checkbox</b></p>
+          <p>Jenis Kelamin</p>
+          <div class="form-check">
+            <input type="checkbox" id="checkLaki" name="jenis_kelamin" value="lakilaki" class="form-check-input" checked="checked">
+            <label for="checkLaki" class="form-check-label">Laki-Laki</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="checkPerempuan" name="jenis_kelamin" value="perempuan" class="form-check-input">
+            <label for="checkPerempuan" class="form-check-label">Perempuan</label>
+          </div>
+
+          <div class="mt-3">
+            <input type="submit" value="SUBMIT" class="btn btn-primary"> 
+            <input type="reset" value="BATAL" class="btn btn-secondary">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- End Form Section -->
+
+  <!-- Footer -->
+  <div class="row footer mt-4">
+    <div class="col-md-12">
+      <p>Pemrograman Web 1</p>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+</div>
+
+<!-- Logo Fixed Position -->
+<img src="images/logo.png" alt="Logo" class="logo-fixed">
+
+<script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
