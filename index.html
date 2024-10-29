@@ -3,94 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTB</title>
+    <title>Document</title>
 </head>
 <body>
 
-    <h1>Dicari Orang Ini, Bila Tertangkap Tolong Sertakan Bukti</h1>
+    <!-- Button untuk menampilkan waktu -->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">Jam Berapa Sekarang?</button>
+    <p id="demo">Demo</p>
 
-    <div style="text-align:center;">
-        <img src="images/foto.jpg" width="500px" height="900px" alt="Foto 1">
-        <img src="images/foto1.jpg" width="500px" height="900px" alt="Foto 2">
-    </div>
+    <!-- Button untuk menampilkan waktu di dalam teks tombol -->
+    <button onclick="this.innerHTML=Date()">Jam Berapa Sekarang?</button>
 
-    <table border="1" style="width:100%; margin-top:20px;">
-        <caption><b>Data Mahasiswa</b></caption>
-        
-        <tr>
-            <th>Nama</th>
-            <th>Universitas</th>
-            <th>Kontak</th>
-        </tr>
-        <tr>
-            <td>Dany Faturrochman</td>
-            <td>Universitas Teknologi Bandung</td>
-            <td>089633892082</td>
-        </tr>
-        <tr>
-          <td>RivalPun</td>
-          <td>Universitas Teknologi Bandung</td>
-          <td>+62 812-1270-4171</td>
-      </tr>
-    </table>
+    <!-- Dropdown untuk memilih hobi -->
+    <select id="hobi" onchange="myFuctionHobi()">
+        <option value="HobiLari">Lari</option>
+        <option value="HobiRenang">Berenang</option>
+    </select>
+    <p id="texthobi">Hasil Hobi</p>
 
-    <form style="margin-top:20px;">
-        <fieldset>
-            <legend>Formulir</legend>
-            
-            <p>
-                <label for="namaDepan">Nama Depan:</label>
-                <input type="text" id="namaDepan" name="namaDepan" placeholder="Nama Depan...">
-            </p>
+    <!-- Script untuk menampilkan alert -->
+    <script language="javascript">
+        alert("Hallo Kikiw");
+        window.alert("Ini Sebuah Kebenaran")
+        document.write("Selamat Hari Raya Idul Fitri <BR> ");
+        document.write("Semoga Lancar");
+    </script>
 
-            <p>
-                <label for="namaBelakang">Nama Belakang:</label>
-                <input type="text" id="namaBelakang" name="namaBelakang" placeholder="Nama Belakang...">
-            </p>
-
-            <p>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="isi password...">
-            </p>
-
-            <p>
-                <label for="jk">Jenis Kelamin:</label>
-                <select id="jk" name="jk">
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-            </p>
-
-            <p><b>Menggunakan Radio Button</b></p>
-            <p>Jenis Kelamin</p>
-            <p>
-                <input type="radio" id="radioLaki" name="jenis_kelamin" value="lakilaki">
-                <label for="radioLaki">Laki-Laki</label>
-            </p>
-            <p>
-                <input type="radio" id="radioPerempuan" name="jenis_kelamin" value="perempuan" checked="checked">
-                <label for="radioPerempuan">Perempuan</label>
-            </p>
-
-            <p><b>Menggunakan Checkbox</b></p>
-            <p>Jenis Kelamin</p>
-            <p>
-                <input type="checkbox" id="checkLaki" name="jenis_kelamin" value="lakilaki" checked="checked">
-                <label for="checkLaki">Laki-Laki</label>
-            </p>
-            <p>
-                <input type="checkbox" id="checkPerempuan" name="jenis_kelamin" value="perempuan">
-                <label for="checkPerempuan">Perempuan</label>
-            </p>
-
-            <p>
-                <input type="submit" value="SUBMIT"> 
-                <input type="reset" value="BATAL">
-            </p>
-        </fieldset>
-    </form>
-
-    <p><b>Perhatikan!!!</b> Ketika kalian mencoba mengetikkan password maka akan muncul berupa bullet, bukan karakter yang sedang Anda ketikkan. Karena <i>type pada</i> inputan password tersebut adalah "password".</p>
+    <!-- Script untuk fungsi pilihan hobi -->
+    <script language="javascript">
+        function myFuctionHobi() {
+            var x = document.getElementById("hobi").value;
+            document.getElementById("texthobi").innerHTML = "Anda Memilih : " + x;
+        }
+    </script>
 
 </body>
 </html>
